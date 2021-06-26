@@ -1,19 +1,20 @@
 " basic cross platform vimrc
 
 
-
 " ***** GENERAL *****
 
-" number sidebar
-set number
+
+" clean up the mess from the os
+set nocompatible
+
+
+
 
 " show cursor location coordinates
 "set cursorline
 
-" allways show command in the bottom bar
-set showcmd
 
-" ***** INDENTATION *****
+" ***** INDENTATION/SYNTAX *****
 
 " render tab as 4 spaces
 set tabstop=4
@@ -24,18 +25,24 @@ set softtabstop=4
 " make tabs act as spaces
 set expandtab
 
+" auto determine file type
 
+if has('filetype')
+    filetype indent plugin on
+endif
 
-" ***** SYNTAX *****
+if has('syntax')
+    syntax on
+endif
 
-" load filetype specific indents
-filetype indent on
+" if filetype unknown, guess indentation
+set autoindent
 
 " autocomplete commands
 set wildmenu
 
-" enable syntax
-syntax on
+" show command suggestions
+set showcmd
 
 " hilight matching brackets
 set showmatch
@@ -46,6 +53,10 @@ set showmatch
 set incsearch
 set hlsearch
 
+" only search with case if search contains capitalized character
+set ignorecase
+set smartcase
+
 " ***** FOLDS ***** 
 " zc/zo/za to open, close and toggle, zM/zR/zi for all
 
@@ -55,31 +66,70 @@ set foldenable
 
 " level to start folding
 set foldlevelstart=3
-"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-
 
 " ***** MOVEMENT *****
 
-" make j and k move cursor visually on screen instead of moving one line (this
-" may cause problems for macros
+" make j and k move cursor visually in normal mode on screen instead of 
+" moving one line (this may cause problems for macros)
 nnoremap j gj
 nnoremap k gk
 
-" TODO: jk->esc, <C-L>
+" keep cursor in same column
+set nostartofline
+
+" ***** MAPPINGS *****
+
+" map jk to exit insert mode
+inoremap jk <Esc>
+
+" map <C-L> (redraw screen) to also turn off search highlighting until the
+" next search
+nnoremap <C-L> :nohl<CR><C-L>
 
 
-" ***** THEME *****
+
+" ***** THEME/VISUAL *****
 colorscheme desert
 
+" number sidebar
+set number
+
+" make command window height 2 lines
+set cmdheight=2
+
+" allways show status line
+set laststatus=2
+
+" show cursor pos
+set ruler
+
+" allways show command in the bottom bar
+set showcmd
 
 
 
+" ***** MISC *****
+
+" dialog when command fails
+set confirm
+
+" get rid of the f****** sound
+set visualbell
+set t_vb=
+
+if has('mouse')
+    set mouse=a
+endif
 
 
+" ***** AUTOCMD *****
 
+" autocreate .txt files
+" autocmd BufNewFile *.txt :write
 
-
+" reindent file on save
+"autocmd BufWritePre *.vimrc :normal gg=G
+"autocmd BufWritePre,BufRead *.vimrc :normal gg=G
 
 
 
