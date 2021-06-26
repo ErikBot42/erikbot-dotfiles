@@ -1,5 +1,6 @@
-" basic cross platform vimrc
-
+" basic cross platform vimrc, a lot of it is from
+" https://learnvimscriptthehardway.stevelosh.com/chapters/12.html
+" a lot of it is from 
 
 " ***** GENERAL *****
 
@@ -117,9 +118,10 @@ set confirm
 set visualbell
 set t_vb=
 
-if has('mouse')
-    set mouse=a
-endif
+" give mouse controll of cursor
+"if has('mouse')
+"    set mouse=a
+"endif
 
 
 " ***** AUTOCMD *****
@@ -127,9 +129,20 @@ endif
 " autocreate .txt files
 " autocmd BufNewFile *.txt :write
 
-" reindent file on save
+" reindent file on save/read
 "autocmd BufWritePre *.vimrc :normal gg=G
 "autocmd BufWritePre,BufRead *.vimrc :normal gg=G
+
+" disable line wrapping in html file
+"autocmd BufNewFile,BufRead *.html setlocal nowrap
+
+"filetype events
+"autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+"autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
+
+":help autocmd-events
+
+
 
 
 
