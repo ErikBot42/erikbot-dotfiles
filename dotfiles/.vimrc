@@ -8,7 +8,7 @@
 set number
 
 " show cursor location coordinates
-set cursorline
+"set cursorline
 
 " allways show command in the bottom bar
 set showcmd
@@ -51,11 +51,11 @@ set hlsearch
 
 " enable folds
 set foldenable
-set foldmethod = indent "syntax, diff, manual, marker, expr...
+"set foldmethod = indent "syntax, diff, manual, marker, expr...
 
 " level to start folding
 set foldlevelstart=3
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 
 
@@ -69,6 +69,8 @@ nnoremap k gk
 " TODO: jk->esc, <C-L>
 
 
+" ***** THEME *****
+colorscheme desert
 
 
 
