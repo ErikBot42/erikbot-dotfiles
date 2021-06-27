@@ -1,6 +1,5 @@
 " basic cross platform vimrc, a lot of it is from
 " https://learnvimscriptthehardway.stevelosh.com/chapters/12.html
-" a lot of it is from 
 
 " ***** GENERAL *****
 
@@ -15,7 +14,7 @@ set nocompatible
 "set cursorline
 
 
-" ***** INDENTATION/SYNTAX *****
+" Indentation and syntax --- {{{
 
 " render tab as 4 spaces
 set tabstop=4
@@ -47,6 +46,7 @@ set showcmd
 
 " hilight matching brackets
 set showmatch
+"}}}
 
 " ***** SEARCH *****
 
@@ -107,6 +107,16 @@ set ruler
 " allways show command in the bottom bar
 set showcmd
 
+"set statusline=%f      "filename
+"set statusline+=\ %m   "modified? [+]
+"set statusline+=%r     "read only? [RO]
+"set statusline+=%h     "help? [help]
+"set statusline+=%h     "help? [help]
+"set statusline+=%=     "right side
+"set statusline+=%l
+"set statusline+=/
+"set statusline+=%L
+
 
 
 " ***** MISC *****
@@ -141,8 +151,20 @@ set t_vb=
 "autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
 
 ":help autocmd-events
+" ***** MOVEMENT MAP *****
+"onoremap p i(
 
+" execute "normal! gg
+" Vimscript file settings --- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
 
+" | = ;
+" :normal! abc = run abc in normal mode, ignore mappings
+" execute "normal! abc<cr> = run abc<cr> in normal mode with actual carriage return
 
 
 
