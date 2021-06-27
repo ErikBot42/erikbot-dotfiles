@@ -1,20 +1,33 @@
 " basic cross platform vimrc, a lot of it is from
 " https://learnvimscriptthehardway.stevelosh.com/chapters/12.html
+" this file uses folds: ggVG + zc/zo to close/open them
 
-" ***** GENERAL *****
-
+" General options ----------{{{
 
 " clean up the mess from the os
 set nocompatible
 
+" dialog when command fails
+set confirm
 
+" get rid of the f****** sound
+set visualbell
+set t_vb=
 
+" give mouse controll of cursor
+"if has('mouse')
+"    set mouse=a
+"endif
 
-" show cursor location coordinates
+" keep cursor in same column
+set nostartofline
+
+" show cursor line 
 "set cursorline
 
+" }}}
 
-" Indentation and syntax --- {{{
+" Indentation and syntax ----------{{{
 
 " render tab as 4 spaces
 set tabstop=4
@@ -48,7 +61,7 @@ set showcmd
 set showmatch
 "}}}
 
-" ***** SEARCH *****
+" Search ----------{{{
 
 " start highlighting immedietly
 set incsearch
@@ -57,8 +70,10 @@ set hlsearch
 " only search with case if search contains capitalized character
 set ignorecase
 set smartcase
+" }}}
 
-" ***** FOLDS ***** 
+" Folds ----------{{{
+
 " zc/zo/za to open, close and toggle, zM/zR/zi for all
 
 " enable folds
@@ -67,18 +82,16 @@ set foldenable
 
 " level to start folding
 set foldlevelstart=3
+" }}}
 
-" ***** MOVEMENT *****
+" Mappings ----------{{{
 
 " make j and k move cursor visually in normal mode on screen instead of 
-" moving one line (this may cause problems for macros)
-nnoremap j gj
-nnoremap k gk
+" moving one line number. ignored with number prefix
+" https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/clhv03p/ ignored with number prefix
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
-" keep cursor in same column
-set nostartofline
-
-" ***** MAPPINGS *****
 
 " map jk to exit insert mode
 inoremap jk <Esc>
@@ -87,7 +100,9 @@ inoremap jk <Esc>
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" }}}
 
+" Theming and visual ----------{{{
 
 " ***** THEME/VISUAL *****
 colorscheme desert
@@ -107,32 +122,39 @@ set ruler
 " allways show command in the bottom bar
 set showcmd
 
-"set statusline=%f      "filename
-"set statusline+=\ %m   "modified? [+]
-"set statusline+=%r     "read only? [RO]
-"set statusline+=%h     "help? [help]
-"set statusline+=%h     "help? [help]
-"set statusline+=%=     "right side
-"set statusline+=%l
-"set statusline+=/
-"set statusline+=%L
+" }}}
 
+" Statusline ----------{{{
+if 1
+set statusline=%f      "filename
+set statusline+=\ %m   "modified? [+]
+set statusline+=%r     "read only? [RO]
+"set statusline+=%h     "help? [Help], help is added automatically...
+set statusline+=%w     "preview? [Preview]
+set statusline+=%y     "filetype
+set statusline+=%q     "quickfix list?
+"set statusline+=%n     "buffer number
+"set statusline+=%b     "cursor char
+"set statusline+=%b     "cursor char
+set statusline+=%=     "right side
+set statusline+=%l
+set statusline+=/
+set statusline+=%L
+set statusline+=\ %c    "column number
+"set statusline+=\ %v      "column number, virtual
+set statusline+=\ %p    "percentage of document
+set statusline+=\asentence
+endif
+" }}}
 
+" Vimscript file settings ----------{{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
 
-" ***** MISC *****
-
-" dialog when command fails
-set confirm
-
-" get rid of the f****** sound
-set visualbell
-set t_vb=
-
-" give mouse controll of cursor
-"if has('mouse')
-"    set mouse=a
-"endif
-
+" Other notes ---------{{{
 
 " ***** AUTOCMD *****
 
@@ -155,16 +177,9 @@ set t_vb=
 "onoremap p i(
 
 " execute "normal! gg
-" Vimscript file settings --- {{{
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
-" }}}
 
 " | = ;
 " :normal! abc = run abc in normal mode, ignore mappings
 " execute "normal! abc<cr> = run abc<cr> in normal mode with actual carriage return
 
-
-
+" }}}
