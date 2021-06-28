@@ -1,11 +1,11 @@
-###WEE MARKDOWN
+### WEE MARKDOWN
 
-##WOO MARKDOWN
+## WOO MARKDOWN
 
 # erikbot-dotfiles
 Personal dotfiles and configs
 
-#TODO
+# TODO
 .fishrc aliases
 
 .bashrc aliases
