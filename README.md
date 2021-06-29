@@ -1,15 +1,14 @@
-### WEE MARKDOWN
 
-## WOO MARKDOWN
 
 # erikbot-dotfiles
 Personal dotfiles and configs
 
-# TODO
+## TODO
 .fishrc aliases
+nvim
+neofetch
+.vimrc
 
-.bashrc aliases
 
-.zshrc aliases
 
 
