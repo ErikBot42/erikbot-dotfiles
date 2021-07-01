@@ -6,8 +6,6 @@ Personal dotfiles and configs
 ## TODO
 .fishrc aliases
 nvim
-neofetch
-.vimrc
 
 
 
