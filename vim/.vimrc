@@ -133,6 +133,25 @@ set showcmd " allways show command in the bottom bar
 
 " Spell check ---------- {{{
 
+if has("spell")
+  " turn spelling on by default
+  " set spell
+
+  " toggle spelling with F4 key
+  map <F4> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
+
+  " they were using white on white
+  highlight PmenuSel ctermfg=black ctermbg=lightgray
+
+  " limit it to just the top 10 items
+  set sps=best,10                    
+endif
+" }}}
+
+" History settings {{{
+" ' files with marks
+" < lines per register
+set viminfo='20,<1000
 " }}}
 
 " Vimscript file settings ----------{{{
