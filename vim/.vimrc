@@ -111,24 +111,24 @@ set showcmd " allways show command in the bottom bar
 " }}}
 
 " Statusline ----------{{{
-"set statusline=%f      "filename
-"set statusline+=\ %m   "modified? [+]
-"set statusline+=%r     "read only? [RO]
-""set statusline+=%h     "help? [Help], help is added automatically...
-"set statusline+=%w     "preview? [Preview]
-"set statusline+=%y     "filetype
-"set statusline+=%q     "quickfix list?
-""set statusline+=%n     "buffer number
-""set statusline+=%b     "cursor char
-""set statusline+=%b     "cursor char
-"set statusline+=%=     "right side
-"set statusline+=%l
-"set statusline+=/
-"set statusline+=%L
-"set statusline+=\ %c    "column number
-""set statusline+=\ %v      "column number, virtual
-"set statusline+=\ %p    "percentage of document
-"set statusline+=\asentence
+set statusline=%f      "filename
+set statusline+=\ %m   "modified? [+]
+set statusline+=%r     "read only? [RO]
+"set statusline+=%h     "help? [Help], help is added automatically...
+set statusline+=%w     "preview? [Preview]
+set statusline+=%y     "filetype
+set statusline+=%q     "quickfix list?
+"set statusline+=%n     "buffer number
+"set statusline+=%b     "cursor char
+"set statusline+=%b     "cursor char
+set statusline+=%=     "right side
+set statusline+=%l
+set statusline+=/
+set statusline+=%L
+set statusline+=\ %c    "column number
+"set statusline+=\ %v      "column number, virtual
+set statusline+=\ %p    "percentage of document
+set statusline+=\asentence
 " }}}
 
 " Spell check ---------- {{{

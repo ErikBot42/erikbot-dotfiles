@@ -1,3 +1,8 @@
 # Install scripts
 
-TODO: naming
+
+| Name                  | Action                          |
+| --------------------- | ------------------------------- |
+| install-essential.sh  | installs essential apt packages |
+
+
