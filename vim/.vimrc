@@ -3,7 +3,12 @@
 " this file uses folds: ggVG + zc/zo to close/open them
 " be sure to :setlocal foldmethod=marker
 
-"TODO: Session files
+"TODO: Session files, vim powerline variant
+"https://www.reddit.com/r/vim/comments/odfbvq/do_you_like_my_minimal_fold_indicators/
+"PSVR p+ <=3.1
+"ncurses
+"nvim tresitter
+" https://www.reddit.com/r/vim/comments/oceswa/never_ending_cycle_of_editing_my_vimrc/
 
 " General options ----------{{{
 
@@ -35,10 +40,11 @@ set nostartofline " keep cursor in same column
 " Indentation and syntax ----------{{{
 
 set tabstop=4       " render tab as 4 spaces
-set softtabstop=4   " does some weird stuff to make mixing tabs and spaces ok
-set expandtab       " when tab is pressed insert spaces instead
+set softtabstop=0   " does some weird stuff to make mixing tabs and spaces ok
+set noexpandtab     " when tab is pressed insert spaces instead
 set autoindent      " if filetype unknown, guess indentation
 set smarttab        " probably something good idk
+set shiftwidth=4
 
 
 if has('filetype') " auto determine file type
