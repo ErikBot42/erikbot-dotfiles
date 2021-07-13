@@ -2,7 +2,7 @@
 source install-essential.sh
 
 # extra stuff I like to have
-install pandoc 
+install pandoc fish powerline
 
 # make gcc ghc...
 

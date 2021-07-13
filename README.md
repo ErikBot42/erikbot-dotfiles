@@ -5,8 +5,8 @@ Personal dotfiles and configs
 
 ## TODO
 .fishrc aliases
-nvim
-
+nvim (plugins)
+dotbot
 
 
 
