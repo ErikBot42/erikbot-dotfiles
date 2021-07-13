@@ -1,0 +1,23 @@
+- defaults:
+    link:
+        create: false
+        relink: true
+        force: false
+        relative: false
+        canonicalize-path: true
+        glob: false
+        ignore-missing: false
+
+- clean: ['~']
+
+- link:
+    ~/.config/fish: fish
+    ~/.config/neofetch: neofetch 
+    ~/.vimrc: .vimrc
+
+    #- create:
+    #- ~/downloads
+    #- ~/.vim/undo-history
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
