@@ -13,11 +13,12 @@
 - link:
     ~/.config/fish: fish
     ~/.config/neofetch: neofetch 
+    ~/.config/nvim: nvim
     ~/.vimrc: .vimrc
 
-    #- create:
-    #- ~/downloads
-    #- ~/.vim/undo-history
+#- create:
+#- ~/downloads
+#- ~/.vim/undo-history
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
