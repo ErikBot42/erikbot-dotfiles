@@ -25,6 +25,7 @@ set t_vb=
 "if has('mouse')
 "    set mouse=a
 "endif
+set mouse-=a
 
 set nostartofline " keep cursor in same column
 
