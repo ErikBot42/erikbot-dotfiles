@@ -13,10 +13,12 @@
 - link:
     ~/.config/fish: fish
     ~/.config/neofetch: neofetch 
+    ~/.config/nvim: nvim
     ~/.vimrc: .vimrc
 
-    #- create:
-    #- ~/downloads
+
+#- create:
+    #- ~/.config/
     #- ~/.vim/undo-history
 
 - shell:
