@@ -16,10 +16,9 @@
     ~/.config/nvim: nvim
     ~/.vimrc: .vimrc
 
-
 #- create:
-    #- ~/.config/
-    #- ~/.vim/undo-history
+#- ~/downloads
+#- ~/.vim/undo-history
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
