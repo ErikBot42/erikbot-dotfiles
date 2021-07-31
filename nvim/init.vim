@@ -53,7 +53,7 @@ filetype plugin indent on
 " }}}
 
 " Powerline {{{
-" let g:airline_powerline_fonts = 1 " Unicode symbols and stuff
+let g:airline_powerline_fonts = 1 " Unicode symbols and stuff
 
 " }}}
 
