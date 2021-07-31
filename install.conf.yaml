@@ -17,7 +17,8 @@
     ~/.vimrc: .vimrc
 
 #- create:
-#- ~/downloads
+#    - ~/.config
+
 #- ~/.vim/undo-history
 
 - shell:
