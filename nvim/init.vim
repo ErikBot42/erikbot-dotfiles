@@ -17,31 +17,45 @@ source ~/.vimrc
 
 "TODO: COLORIZE COLOR CODES
 
+" Plugins{{{
 "INSTALL - :PlugUpdate
 "CLEAN - :PlugClean
+
+filetype off
 call plug#begin('~/.vim/plugged')
 
 
-" Code and project naviagtion {{{
-
-Plug 'preservim/nerdtree' 					" file tree
-Plug 'ryanoasis/vim-devicons' 				" file tree icons
-"Plugin 'majutsushi/tagbar'                  " Class/module browser
-"Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
-
-" }}}
-
+" File tree
+Plug 'preservim/nerdtree'                                        " file tree
+Plug 'ryanoasis/vim-devicons'                                    " file tree icons
+Plug 'Xuyuanp/nerdtree-git-plugin'                               " git status
+"Plugin 'majutsushi/tagbar'                                      " Class/module browser
+"Plugin 'kien/ctrlp.vim'                                         " Fast transitions on project files
 
 "Plug 'tpope/vim-sensible'
 "Plug 'junegunn/seoul256.vim'
-"Plug 'Xuyuanp/nerdtree-git-plugin' " git status
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " syntax
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'                  " syntax
 "Plug 'tikhomirov/vim-glsl'
-"Plug 'calviken/vim-gdscript3' " GDScript syntax
-"Plug 'kevinoid/vim-jsonc' " JSON syntax highlighting
+"Plug 'calviken/vim-gdscript3'                                   " GDScript syntax
+"Plug 'kevinoid/vim-jsonc'                                       " JSON syntax highlighting
 "Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
-Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
+
+" Status line
+Plug 'vim-airline/vim-airline'                                   " Lean & mean status/tabline for vim
+Plug 'vim-airline/vim-airline-themes'                            " Fonts for airline
+
+" Syntax
+Plug 'blankname/vim-fish' "fish syntax
+
 call plug#end()
+filetype plugin indent on 
+
+" }}}
+
+" Powerline {{{
+" let g:airline_powerline_fonts = 1 " Unicode symbols and stuff
+
+" }}}
 
 "cginc syntax
 "autocmd BufNewFile,BufRead *.cginc set syntax=c
