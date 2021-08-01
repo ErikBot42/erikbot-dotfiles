@@ -85,7 +85,7 @@ function fish_prompt
     end
 
     #echo -n -s $arrow ' '$cwd $repo_info $normal ' '
-    echo -n -s $arrow ' '$cwd $repo_info $normal ' '
+    echo -n -s $arrow_color$hostname ' ' $cwd $repo_info $normal ' '
 
 
 

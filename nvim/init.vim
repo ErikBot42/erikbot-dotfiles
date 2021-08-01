@@ -21,7 +21,9 @@ source ~/.vimrc
 "INSTALL - :PlugUpdate
 "CLEAN - :PlugClean
 
+filetype plugin indent off
 filetype off
+syntax off
 call plug#begin('~/.vim/plugged')
 
 
@@ -44,11 +46,16 @@ Plug 'Xuyuanp/nerdtree-git-plugin'                               " git status
 Plug 'vim-airline/vim-airline'                                   " Lean & mean status/tabline for vim
 Plug 'vim-airline/vim-airline-themes'                            " Fonts for airline
 
+" Other
+Plug 'tpope/vim-commentary'                                      " comment with gc
+
 " Syntax
 Plug 'blankname/vim-fish' "fish syntax
 
 call plug#end()
-filetype plugin indent on 
+filetype plugin indent on
+filetype on
+syntax on
 
 " }}}
 

@@ -3,25 +3,30 @@ function fish_mode_prompt
 #	echo -n "$fish_bind_mode "
 
 
+
 switch $fish_bind_mode
 case default
 set_color --bold red
-echo '[N'
+set vi_character 'N'
 case insert
 set_color --bold green
-echo '[I'
+set vi_character 'I'
 case replace_one
 set_color --bold green
-echo '[R'
+set vi_character 'R'
 case visual
 set_color --bold brmagenta
-echo '[V'
-case '[*'
+set vi_character 'V'
+case '*'
 set_color --bold red
-echo '[?'
+set vi_character '?'
 end
 
-echo "] "
+
+#echo "["
+echo $vi_character
+#echo "]"
+echo " "
 
 set_color normal
 

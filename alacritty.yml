@@ -173,7 +173,7 @@
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night)
 colors:
@@ -267,26 +267,26 @@ colors:
   #  background: CellForeground
 
   # Normal colors
-  #normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
+  normal:
+    black:   '#000000'
+    red:     '#AA0000'
+    green:   '#00AA00'
+    yellow:  '#AA5500'
+    blue:    '#0000AA'
+    magenta: '#AA00AA'
+    cyan:    '#00AAAA'
+    white:   '#AAAAAA'
 
   # Bright colors
-  #bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
+  bright:
+    black:   '#555555'
+    red:     '#FF5555'
+    green:   '#55FF55'
+    yellow:  '#FFFF55'
+    blue:    '#5555FF'
+    magenta: '#FF55FF'
+    cyan:    '#55FFFF'
+    white:   '#FFFFFF'
 
   # Dim colors
   #
