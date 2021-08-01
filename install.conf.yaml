@@ -14,6 +14,7 @@
     ~/.config/fish: fish
     ~/.config/neofetch: neofetch 
     ~/.config/nvim: nvim
+    ~/.config/alacritty.yml: alacritty.yml
     ~/.vimrc: .vimrc
 
 #- create:
