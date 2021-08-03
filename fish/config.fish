@@ -4,5 +4,6 @@
 
 
 set fish_greeting
+set EDITOR nvim
 #neofetch --config /home/erik/.config/neofetch/configQuick.conf
 #fetch
