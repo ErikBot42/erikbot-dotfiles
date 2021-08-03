@@ -1,3 +1,5 @@
 function fish_greeting
-	fetch
+	if test (tput lines) -gt 28;
+		fetch
+	end
 end

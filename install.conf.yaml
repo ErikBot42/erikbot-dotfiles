@@ -15,6 +15,7 @@
     ~/.config/neofetch: neofetch 
     ~/.config/nvim: nvim
     ~/.config/alacritty.yml: alacritty.yml
+    ~/.config/tmux: tmux
     ~/.vimrc: .vimrc
 
 #- create:
