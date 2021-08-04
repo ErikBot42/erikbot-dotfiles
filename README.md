@@ -3,12 +3,15 @@
 # erikbot-dotfiles
 Personal dotfiles and configs.
 
-Powered by dotbot 
+Powered by dotbot
+
+|---------|---------------------------------|
+| install | start dotbot to create symlinks |
+|---------|---------------------------------|
 
 ## TODO
-.fishrc aliases
-nvim (plugins)
-dotbot plugins
+tmux plugins
+package install script
 
 
 
