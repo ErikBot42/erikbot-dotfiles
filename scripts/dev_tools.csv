@@ -1,0 +1,5 @@
+pacman, apt
+gcc,    gcc
+make,   make
+stack,  haskell-stack
+

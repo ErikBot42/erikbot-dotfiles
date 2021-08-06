@@ -1,0 +1,9 @@
+pacman,          apt
+syncthing,       syncthing
+wireguard-tools, wireguard-tools
+ncdu,            ncdu
+nmap,            nmap
+fastfetch,       neofetch
+sshfs,           sshfs
+iotop,           iotop
+xclip,           xclip
