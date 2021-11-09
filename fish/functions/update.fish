@@ -4,6 +4,7 @@ function update -d "update packages"
 	command -v apt && sudo apt update && sudo apt upgrade -y # debian
 	command -v pacman && sudo pacman -Syu                    # arch
 	command -v pkg && pkg upgrade -y                         # termux
+	command -v snap && sudo snap refresh                     # snap
 	command -v flatpak && flatpak update -y                  # flatpak
 	
 	# vim-plug
