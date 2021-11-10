@@ -50,7 +50,7 @@ Plug 'blankname/vim-fish'             " fish syntax
 "Plug 'junegunn/seoul256.vim'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " syntax
 "Plug 'tikhomirov/vim-glsl'
-"Plug 'calviken/vim-gdscript3'                   " GDScript syntax
+Plug 'calviken/vim-gdscript3'                   " GDScript syntax
 "Plug 'kevinoid/vim-jsonc'                       " JSON syntax highlighting
 "Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete
 call plug#end()

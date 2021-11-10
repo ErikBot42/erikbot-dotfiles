@@ -41,10 +41,10 @@ set nostartofline " keep cursor in same column
 " Indentation and syntax ----------{{{
 
 set tabstop=4       " render tab as 4 spaces
-set softtabstop=0   " does some weird stuff to make mixing tabs and spaces ok
+"set softtabstop=0   " does some weird stuff to make mixing tabs and spaces ok
 set noexpandtab     " when tab is pressed insert spaces instead
 set autoindent      " if filetype unknown, guess indentation
-set smarttab        " probably something good idk
+"set smarttab        " probably something good idk
 set shiftwidth=4
 
 
@@ -106,7 +106,7 @@ set title " change terminal title
 
 
 set number " hybrid number sidebar
-set relativenumber
+"set relativenumber
 
 " Bottom
 set laststatus=2 " allways add status line for extra windows
@@ -156,11 +156,18 @@ endif
 set viminfo='20,<1000
 " }}}
 
-" Vimscript file settings ----------{{{
+" File settings ----------{{{
+"
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+" }}}
+
+" Auto cmd ----------{{{
+" autocmd BufNewFile,BufRead *.md,*.mkdn,*.markdown :set filetype=markdown
+autocmd BufNewFile,BufRead *.cginc :set filetype=shaderlab
+autocmd BufNewFile,BufRead *.shader :set filetype=shaderlab
 " }}}
 
 " Other notes ---------{{{
@@ -192,6 +199,7 @@ augroup END
 " execute "normal! abc<cr> = run abc<cr> in normal mode with actual carriage return
 
 " }}}
+
 
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
