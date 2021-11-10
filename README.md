@@ -9,9 +9,6 @@ Powered by dotbot
 |---------|---------------------------------|
 
 ## TODO
-tmux plugins
 package install script
-fish script optimization
-swap ESC-CAPS
 
 
