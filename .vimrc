@@ -47,6 +47,9 @@ set autoindent      " if filetype unknown, guess indentation
 "set smarttab        " probably something good idk
 set shiftwidth=4
 
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
 if has('filetype') " auto determine file type
     filetype indent plugin on
