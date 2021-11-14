@@ -40,12 +40,10 @@ set nostartofline " keep cursor in same column
 
 " Indentation and syntax ----------{{{
 
-set tabstop=4       " render tab as 4 spaces
-"set softtabstop=0   " does some weird stuff to make mixing tabs and spaces ok
-set noexpandtab     " when tab is pressed insert spaces instead
-set autoindent      " if filetype unknown, guess indentation
-"set smarttab        " probably something good idk
+set tabstop=4     " tab is 4 spaces
 set shiftwidth=4
+set expandtab     " when tab is pressed insert spaces instead
+set autoindent    " if filetype unknown, guess indentation
 
 
 if has('filetype') " auto determine file type
