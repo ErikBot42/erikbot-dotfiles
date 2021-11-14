@@ -40,10 +40,10 @@ set nostartofline " keep cursor in same column
 
 " Indentation and syntax ----------{{{
 
-set tabstop=4     " tab is 4 spaces
-set shiftwidth=4
-set expandtab     " when tab is pressed insert spaces instead
-set autoindent    " if filetype unknown, guess indentation
+"set tabstop=4     " tab is 4 spaces
+"set shiftwidth=4
+"set expandtab     " when tab is pressed insert spaces instead
+"set autoindent    " if filetype unknown, guess indentation
 
 set expandtab
 set tabstop=4
