@@ -17,6 +17,7 @@
     ~/.config/alacritty.yml: alacritty.yml
     ~/.config/tmux: tmux
     ~/.vimrc: .vimrc
+    ~/.config/awesome/rc.lua: rc.lua
 
 #- create:
 #    - ~/.config
